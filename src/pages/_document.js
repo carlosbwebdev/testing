@@ -1,8 +1,9 @@
+import Footer from "@/components/UI/Footer";
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html lang="pt">
       <Head />
       <body>
         <Main />

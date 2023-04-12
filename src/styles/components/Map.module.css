@@ -1,0 +1,260 @@
+.mapContainer {
+  position: relative;
+  width: 100%;
+  max-width: 2000px;
+  height: 700px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100px 300px 1fr;
+  justify-content: center;
+  align-items: center;
+  bottom: -3rem;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.mapContainer::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background-image: url("../../assets/bgMap.png"); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.8;
+}
+.mapContainer.bg-click1::after {
+  background-image: url("../../assets/modalmap/modal1.jpg");
+}
+
+.mapContainer.bg-click2::after {
+  background-image: url("../../assets/modalmap/modal2.jpg");
+}
+
+.mapContainer.bg-click3::after {
+  background-image: url("../../assets/modalmap/modal3.jpg");
+}
+
+.defaultImageContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0rem;
+}
+
+.defaultImageContainer img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  left: 0rem;
+  top: 0;
+  z-index: 3;
+  opacity: 0.3;
+}
+
+.mapContainer h2 {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  font-size: 2.7rem;
+  color: #fff;
+  font-family: MonumentExtended, sans-serif;
+}
+
+.text {
+  grid-row: 1/3;
+  grid-column: 1/4;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  z-index: 3;
+  position: relative;
+  top: 0rem;
+  padding-left: 8rem;
+}
+
+.text h3 {
+  font-size: 2rem;
+  color: #fff;
+  font-family: MonumentExtended, sans-serif;
+  text-align: start;
+}
+
+.text p {
+  width: 60%;
+  font-size: 1rem;
+  font-weight: 100;
+  color: #fff;
+  text-align: start;
+}
+
+.mapContainer span {
+  color: #fff;
+  position: relative;
+  top: 10rem;
+  left: 25rem;
+  animation: blinkMove 3s ease-in infinite;
+}
+
+.svgContainer {
+  grid-row: 2/3;
+  grid-column: 1/-1;
+  width: 70%;
+  margin: 0 auto;
+  z-index: 3;
+  position: relative;
+  top: 8rem;
+  left: 6rem;
+}
+
+.modalTransition {
+  opacity: 0;
+  transition: all 1s ease-in;
+}
+.modalTransition.visible {
+  opacity: 1;
+}
+
+.finish {
+  transition: all 0.5s ease-in;
+  cursor: pointer;
+}
+
+.finish:hover {
+  opacity: 0.5;
+}
+
+.location1 {
+  transition: all 0.5s ease-in;
+  cursor: pointer;
+}
+
+.location1:hover {
+  opacity: 0.5;
+}
+.location2 {
+  transition: all 0.5s ease-in;
+  cursor: pointer;
+}
+
+.location2:hover {
+  opacity: 0.5;
+}
+.location3 {
+  transition: all 0.5s ease-in;
+  cursor: pointer;
+}
+
+.location3:hover {
+  opacity: 0.5;
+}
+.location4 {
+  transition: all 0.5s ease-in;
+  cursor: pointer;
+}
+
+.location4:hover {
+  opacity: 0.5;
+}
+.location5 {
+  transition: all 0.5s ease-in;
+  cursor: pointer;
+}
+
+.location5:hover {
+  opacity: 0.5;
+}
+
+@keyframes blinkMove {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(2rem);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .mapContainer {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 300px 1fr;
+    justify-content: flex-start;
+    align-items: flex-start;
+    bottom: -3rem;
+    z-index: 3;
+    overflow: hidden;
+  }
+
+  .mapContainer::after {
+    background-position: fixed;
+    background-attachment: inherit;
+  }
+
+  .mapContainer h2 {
+    padding-top: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .text {
+    width: 80%;
+    margin: 0 auto;
+    grid-row: 1/-1;
+    grid-column: 1/4;
+    position: relative;
+    padding-left: 0rem;
+    padding-bottom: 2rem;
+  }
+
+  .text h3 {
+    font-size: 1rem;
+  }
+
+  .text p {
+    font-size: 0.8rem;
+    width: 100%;
+  }
+
+  .svgContainer {
+    grid-row: 1/-1;
+    grid-column: 1/2;
+    width: 500%;
+    top: 3rem;
+    left: -8rem;
+  }
+  /* 
+  .defaultImageContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0rem;
+  }
+
+  .defaultImageContainer img {
+    width: 36%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    position: relative;
+    left: 2.5rem;
+    top: 40%;
+    z-index: 3;
+    opacity: 0.8;
+  } */
+}

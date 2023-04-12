@@ -1,0 +1,26 @@
+.videoContainer {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Proporção 16:9 */
+  overflow: hidden;
+  /* background: #000; */
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  /* transition: all 0.3s ease-in; */
+  /* transition-delay: 0.4s; */
+}
+
+.videoContainer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media screen and (max-width: 700px) {
+  .videoContainer {
+    padding-bottom: none;
+  }
+}

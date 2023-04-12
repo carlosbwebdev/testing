@@ -8,16 +8,9 @@ import Gallery__item__1 from "../assets/homegallery/gallery1.jpg";
 import Gallery__item__2 from "../assets/homegallery/gallery2.jpg";
 
 const HomeGallery = () => {
-  const [scroll, setScroll] = useState(false);
   const [isHovering1, setIsHovering1] = useState(false);
   const [isHovering2, setIsHovering2] = useState(false);
   const [isHovering3, setIsHovering3] = useState(false);
-
-  const ref = useRef(null);
-
-  const { scrollY } = useScroll();
-  const y1 = useTransform(scrollY, [0, 100], [0, 0]);
-  const y2 = useTransform(scrollY, [100, 0], [0, 300]);
 
   const handleMouseOver1 = () => {
     setIsHovering1(true);
@@ -46,20 +39,13 @@ const HomeGallery = () => {
   const variants = {
     offscreen: {
       opacity: 0,
-      scale: 0.1,
-      // y: 100,
-      // x: -300,
     },
     onscreen: {
       opacity: 1,
-      scale: 1,
-      // y: 10,
-      x: 0,
-
       transition: {
         type: "easeIn",
         stiffness: 100,
-        duration: 0.5,
+        duration: 0.7,
         delay: 0.2,
       },
     },
@@ -68,17 +54,18 @@ const HomeGallery = () => {
     offscreen: {
       opacity: 0,
 
-      // y: 100,
+      y: 100,
     },
     onscreen: {
       opacity: 1,
       // y: 10,
-      // y: 0,
+      y: 0,
 
       transition: {
         type: "easeIn",
         stiffness: 100,
         duration: 0.5,
+        delay: 0.2,
       },
     },
   };
@@ -90,7 +77,7 @@ const HomeGallery = () => {
           <motion.div
             initial="offscreen"
             whileInView="onscreen"
-            viewport={{ once: false, amount: 0.4 }}
+            viewport={{ once: true, amount: 0.8 }}
             variants={variants}
             className={styles.gallery__header__title}
           >
@@ -104,7 +91,7 @@ const HomeGallery = () => {
           <motion.div
             initial="offscreen"
             whileInView="onscreen"
-            viewport={{ once: false, amount: 0.4 }}
+            viewport={{ once: true, amount: 0.4 }}
             variants={variants}
             className={styles.gallery__header__right}
           >
@@ -124,7 +111,7 @@ const HomeGallery = () => {
           <motion.div
             initial="offscreen"
             whileInView="onscreen"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             variants={variantsBottom}
             className={`${styles.gallery__item} ${
               isHovering1
@@ -146,7 +133,7 @@ const HomeGallery = () => {
           <motion.div
             initial="offscreen"
             whileInView="onscreen"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             variants={variantsBottom}
             className={`${styles.gallery__item} ${
               isHovering2
@@ -168,7 +155,7 @@ const HomeGallery = () => {
           <motion.div
             initial="offscreen"
             whileInView="onscreen"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             variants={variantsBottom}
             className={`${styles.gallery__item} ${
               isHovering3

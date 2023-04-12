@@ -1,0 +1,72 @@
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.container .containerCenter {
+  width: 80%;
+  margin: 0 auto;
+  height: 700px;
+  max-width: 1300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.container .containerCenter h4 {
+  font-size: 2.7rem;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  font-family: MonumentExtended, sans-serif;
+}
+
+.container .containerCenter p {
+  width: 30%;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.container .containerCenter button {
+  width: 200px;
+  height: 50px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.container .containerCenter button:hover {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 700px) {
+  .container .containerCenter h4 {
+    font-size: 1.8rem;
+  }
+
+  .container .containerCenter p {
+    width: 100%;
+    color: #fff;
+    text-align: center;
+  }
+  .container .containerCenter button {
+    width: 180px;
+    height: 50px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+}
