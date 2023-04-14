@@ -42,16 +42,16 @@
 
 /* Para iPads na orientação paisagem (landscape) */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .cursorText {
+  /* .cursorText {
     display: none;
-  }
+  } */
 }
 
 /* Para Tablets Android (geralmente) */
 @media screen and (min-width: 600px) and (max-width: 1600px) {
-  .cursorText {
+  /* .cursorText {
     display: none;
-  }
+  } */
 }
 /* spring animation */
 
