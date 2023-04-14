@@ -8,7 +8,7 @@ const Navbar = ({ toggleSidebar, sideBarState }) => {
     <motion.header
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.5, delay: 0.2 }}
+      transition={{ duration: 0.3, delay: 0.7 }}
       className={styles.header}
     >
       <nav className={styles.nav}>
