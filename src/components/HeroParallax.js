@@ -14,14 +14,6 @@ const HeroParallax = () => {
   return (
     <motion.main className={styles.main}>
       <motion.div className={styles.heroBg} style={{ y: 0, x: 0 }}>
-        {/* <motion.h1
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.7 }}
-          style={{ y: y1, x: 0 }}
-        >
-          GoBuggy
-        </motion.h1> */}
         <motion.div
           className={styles.heroTitle}
           initial={{ opacity: 0 }}

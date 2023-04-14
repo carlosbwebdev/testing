@@ -28,7 +28,7 @@ const Servicos = () => {
         <motion.div
           initial="offscreen"
           whileInView="onscreen"
-          viewport={{ once: true, amount: 0.4 }}
+          viewport={{ once: false, amount: 0.4 }}
           variants={variants}
           className={styles.gallery__header__title}
         >
