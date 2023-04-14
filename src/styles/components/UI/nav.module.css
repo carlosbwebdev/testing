@@ -153,6 +153,7 @@
   .nav .navImg {
     position: relative;
     top: 0.8rem;
+    left: -3rem;
     width: 230px;
     object-fit: cover;
     cursor: pointer;
