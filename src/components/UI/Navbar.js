@@ -2,10 +2,15 @@ import React from "react";
 import Image from "next/image";
 import Logo from "../../assets/logo.svg";
 import styles from "../../styles/components/UI/nav.module.css";
-
+import { motion } from "framer-motion";
 const Navbar = ({ toggleSidebar, sideBarState }) => {
   return (
-    <header className={styles.header}>
+    <motion.header
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5, delay: 0.2 }}
+      className={styles.header}
+    >
       <nav className={styles.nav}>
         <div className={styles.navImg}>
           <Image src={Logo} alt="logo" />
@@ -21,7 +26,7 @@ const Navbar = ({ toggleSidebar, sideBarState }) => {
           <div className={styles.lineBottom}></div>
         </div>
       </nav>
-    </header>
+    </motion.header>
   );
 };
 
