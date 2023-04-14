@@ -55,7 +55,7 @@ const ITEMS = [
 const Carousel = () => {
   return (
     <Swiper
-      slidesPerView={1}
+      slidesPerView={2}
       spaceBetween={0}
       // centeredSlides={true}
       className={styles.mySwiperCard}
