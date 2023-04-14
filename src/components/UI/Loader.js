@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "../../styles/components/UI/Loader.module.css";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import Logo from "../../assets/logo3.svg";
+import Logo from "../../assets/logofinal.svg";
 
 const phrases = [
   "Aventura",

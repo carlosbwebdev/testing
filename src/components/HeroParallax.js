@@ -21,7 +21,7 @@ const HeroParallax = () => {
           transition={{ duration: 1, delay: 0.7 }}
           style={{ y: y1, x: 0 }}
         >
-          <Image src={Title} alt="Logo" />
+          <h1>Aventura</h1>
         </motion.div>
       </motion.div>
       <motion.div
