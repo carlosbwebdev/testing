@@ -30,7 +30,7 @@ const SliderClientes = () => {
       >
         {images?.map((item) => (
           <SwiperSlide key={item.id} className={styles.slider}>
-            <Image src={item.url} alt={""} width={"100%"} height={"100%"} />
+            <Image src={item.url} alt={""} />
           </SwiperSlide>
         ))}
       </Swiper>
