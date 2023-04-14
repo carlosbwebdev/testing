@@ -1,0 +1,83 @@
+.customCursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999999;
+  display: flex;
+  align-items: center;
+  background-color: #b90808;
+  width: max-content;
+  height: max-content;
+  border-radius: 50% 30% 50% 40%;
+  transform: rotate(-8deg);
+  animation: spring 10s infinite;
+  margin-left: 2rem;
+  font-family: MonumentExtended, sans-serif;
+}
+
+.cursorText {
+  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #f8f8f8;
+
+  /* padding: 0.5rem 1rem; */
+
+  /* transform: rotate(-10deg); */
+}
+
+.cursorIcon {
+  width: 20px;
+  height: 30px;
+  background-image: url("/cursor-hand.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Para iPads na orientação retrato (portrait) */
+@media screen and (max-width: 767px) {
+  .cursorText {
+    display: none;
+  }
+}
+
+/* Para iPads na orientação paisagem (landscape) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .cursorText {
+    display: none;
+  }
+}
+
+/* Para Tablets Android (geralmente) */
+@media screen and (min-width: 600px) and (max-width: 1600px) {
+  .cursorText {
+    display: none;
+  }
+}
+/* spring animation */
+
+@keyframes spring {
+  0% {
+    opacity: 1;
+  }
+  16.67% {
+    opacity: 0;
+  }
+  33.34% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  66.67% {
+    opacity: 1;
+  }
+  83.34% {
+    opacity: 0;
+  }
+  98% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

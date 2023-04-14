@@ -1,28 +1,25 @@
-import React, { useEffect } from "react";
-import styles from "../../styles/components/UI/Navbar.module.css";
+import React from "react";
+import Image from "next/image";
+import Logo from "../../assets/logo.svg";
+import styles from "../../styles/components/UI/nav.module.css";
 
-const Navbar = () => {
-  //when the user scrolls down 400px down from the top of the document, the navbar will change color
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", () => {
-  //     if (window.scrollY > 400) {
-  //       document.querySelector("header").style.backgroundColor =
-  //         " rgb(34, 34, 34)";
-
-  //       document.querySelector("header").style.transition = "all 0.5s ease";
-  //     } else {
-  //       document.querySelector("header").style.backgroundColor = "transparent";
-  //       document.querySelector("header").style.transition = "all 0.5s ease";
-  //     }
-  //   });
-  // }, []);
-
+const Navbar = ({ toggleSidebar, sideBarState }) => {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-        <ul className={styles.navLogo}>GoBuggy | Arcos</ul>
-        <ul className={styles.navMenu}>Menu</ul>
+        <div className={styles.navImg}>
+          <Image src={Logo} alt="logo" />
+        </div>
+        <div
+          onClick={toggleSidebar}
+          className={`${
+            !sideBarState ? styles.burgerMenuOpen : styles.burgerMenuClose
+          }`}
+        >
+          <div className={styles.lineTop}></div>
+          <div className={styles.lineMiddle}></div>
+          <div className={styles.lineBottom}></div>
+        </div>
       </nav>
     </header>
   );

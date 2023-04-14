@@ -1,7 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import styles from "../styles/components/HeroParallax.module.css";
+import Image from "next/image";
 
 import { useScroll, motion, useTransform, useMotionValue } from "framer-motion";
+
+import Title from "../assets/heroTitle.svg";
 
 const HeroParallax = () => {
   const { scrollY } = useScroll();
@@ -11,14 +14,23 @@ const HeroParallax = () => {
   return (
     <motion.main className={styles.main}>
       <motion.div className={styles.heroBg} style={{ y: 0, x: 0 }}>
-        <motion.h1
+        {/* <motion.h1
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.7 }}
           style={{ y: y1, x: 0 }}
         >
-          Aventura
-        </motion.h1>
+          GoBuggy
+        </motion.h1> */}
+        <motion.div
+          className={styles.heroTitle}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.7 }}
+          style={{ y: y1, x: 0 }}
+        >
+          <Image src={Title} alt="Logo" />
+        </motion.div>
       </motion.div>
       <motion.div
         className={styles.heroMove}

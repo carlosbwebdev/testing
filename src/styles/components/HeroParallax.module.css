@@ -21,6 +21,21 @@
   overflow: hidden;
 }
 
+.heroTitle {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.heroTitle img {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: auto;
+}
+
 .heroBg {
   position: absolute;
   top: 0;
@@ -78,5 +93,13 @@
     position: relative;
     top: 30%;
     font-size: 2.2rem;
+  }
+  .heroTitle img {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: auto;
   }
 }

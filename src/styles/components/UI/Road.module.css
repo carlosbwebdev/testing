@@ -1,0 +1,25 @@
+.road {
+  position: relative;
+  width: 40%;
+  height: 10px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.line {
+  position: absolute;
+  width: 10%;
+  height: 100%;
+  background-color: #fff;
+  animation: moveLine 10s linear infinite;
+}
+
+@keyframes moveLine {
+  0% {
+    transform: translateX(10%);
+  }
+
+  100% {
+    transform: translateX(-110%);
+  }
+}

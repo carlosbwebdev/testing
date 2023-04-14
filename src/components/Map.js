@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import styles from "../styles/components/Map.module.css";
 import VisibilitySensor from "react-visibility-sensor";
