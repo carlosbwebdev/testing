@@ -11,6 +11,7 @@ import Layout from "@/components/UI/Layout";
 import HeroParallax from "@/components/HeroParallax";
 import Servicos from "@/components/Servicos";
 import Loader from "@/components/UI/Loader";
+import SliderClientes from "@/components/SliderClientes";
 
 export default function Home() {
   const [animation, setAnimation] = useState(true);
@@ -79,6 +80,7 @@ export default function Home() {
           <Servicos />
           <HomeGallery />
           <Opiniao />
+          <SliderClientes />
           <Map />
           <ReserveHome />
         </motion.div>

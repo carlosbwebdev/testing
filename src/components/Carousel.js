@@ -1,5 +1,4 @@
 // import "../styles/components/flickity.css";
-import { useRef } from "react";
 import styles from "../styles/components/Carousel.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -12,43 +11,43 @@ const ITEMS = [
     id: 1,
     imageSrc: Buggy,
     name: "Nome 1",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing",
   },
   {
     id: 2,
     imageSrc: Buggy,
     name: "Nome 2",
-    text: "Pellentesque euismod, nisl vel tincidunt lacinia, nunc tortor aliquam nisl, eu aliquet nunc nisl eu ante.",
+    text: "Pellentesque euismod, nisl vel tincidunt lacinia,",
   },
   {
     id: 3,
     imageSrc: Buggy,
     name: "Nome 2",
-    text: "Pellentesque euismod, nisl vel tincidunt lacinia, nunc tortor aliquam nisl, eu aliquet nunc nisl eu ante.",
+    text: "Pellentesque euismod, nisl vel tincidunt lacinia,",
   },
   {
     id: 4,
     imageSrc: Buggy,
     name: "Nome 2",
-    text: "Pellentesque euismod, nisl vel tincidunt lacinia, nunc tortor aliquam nisl, eu aliquet nunc nisl eu ante.",
+    text: "Pellentesque euismod, nisl vel tincidunt lacinia,",
   },
   {
     id: 5,
     imageSrc: Buggy,
     name: "Nome 2",
-    text: "Pellentesque euismod, nisl vel tincidunt lacinia, nunc tortor aliquam nisl, eu aliquet nunc nisl eu ante.",
+    text: "Pellentesque euismod, nisl vel tincidunt lacinia, ",
   },
   {
     id: 6,
     imageSrc: Buggy,
     name: "Nome 2",
-    text: "Pellentesque euismod, nisl vel tincidunt lacinia, nunc tortor aliquam nisl, eu aliquet nunc nisl eu ante.",
+    text: "Pellentesque euismod, nisl vel tincidunt lacinia,",
   },
   {
     id: 7,
     imageSrc: Buggy,
     name: "Nome 2",
-    text: "Pellentesque euismod, nisl vel tincidunt lacinia, nunc tortor aliquam nisl, eu aliquet nunc nisl eu ante.",
+    text: "Pellentesque euismod, nisl vel tincidunt lacinia,",
   },
   // adicione mais cards aqui
 ];
@@ -56,10 +55,10 @@ const ITEMS = [
 const Carousel = () => {
   return (
     <Swiper
-      slidesPerView={2}
+      slidesPerView={1}
       spaceBetween={0}
-      centeredSlides={true}
-      className="mySwiper"
+      // centeredSlides={true}
+      className={styles.mySwiperCard}
     >
       {ITEMS?.map((item) => (
         <SwiperSlide key={item.id} className={styles.card}>
