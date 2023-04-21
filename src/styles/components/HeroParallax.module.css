@@ -47,7 +47,7 @@
   min-height: 100vh;
   min-height: calc(var(--vh, 1vh) * 100);
   min-height: 100svh;
-  background-image: url("../../assets/hero/sky.png");
+  background-image: url("../../assets/hero/sky2.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -65,7 +65,7 @@
   min-height: 100vh;
   min-height: calc(var(--vh, 1vh) * 100);
   min-height: 100svh;
-  background-image: url("../../assets/hero/buggy.png");
+  background-image: url("../../assets/buggy.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
