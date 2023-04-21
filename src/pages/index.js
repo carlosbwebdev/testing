@@ -68,7 +68,7 @@ export default function Home() {
       <Layout>
         <motion.div>
           <Head>
-            <title>GoBuggy | Arcos HomePage</title>
+            <title>Página Inicial | GoBuggy Arcos </title>
             <meta
               name="description"
               content="Pagina inicial GoBuggy Arcos website"

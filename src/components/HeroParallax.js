@@ -4,8 +4,6 @@ import Image from "next/image";
 
 import { useScroll, motion, useTransform, useMotionValue } from "framer-motion";
 
-import Title from "../assets/heroTitle.svg";
-
 const HeroParallax = () => {
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [400, 0], [400, 0]);

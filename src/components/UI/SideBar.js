@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../../styles/components/UI/SideBar.module.css";
+import Link from "next/link";
 
 const SideBar = ({ isOpen, toggleSidebar }) => {
   return (
@@ -7,10 +8,10 @@ const SideBar = ({ isOpen, toggleSidebar }) => {
       className={` ${styles.sideBar} ${isOpen ? styles.showSidebar : ""} `}
     >
       <nav className={` ${isOpen ? styles.sideBarAnimation : ""}`}>
-        <a href="">Home</a>
-        <a href="">Passeios</a>
-        <a href="">Contactos</a>
-        <a href="">Reserva Já</a>
+        <Link href="/">Home</Link>
+        <Link href="/passeios">Passeios</Link>
+        <Link href="/contactos">Contactos</Link>
+        <Link href="#">Reserva Já</Link>
       </nav>
     </aside>
   );
