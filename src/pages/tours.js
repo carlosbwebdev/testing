@@ -74,7 +74,7 @@ const Passeios = () => {
       <Layout>
         <div className={styles.passeiosPage}>
           <div className={styles.title}>
-            <h1>Passeios</h1>
+            <h1>Tours</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
             </p>

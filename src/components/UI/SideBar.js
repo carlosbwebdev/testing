@@ -8,8 +8,8 @@ const SideBar = ({ isOpen, toggleSidebar }) => {
       className={` ${styles.sideBar} ${isOpen ? styles.showSidebar : ""} `}
     >
       <nav className={` ${isOpen ? styles.sideBarAnimation : ""}`}>
-        <Link href="/">Home</Link>
-        <Link href="/passeios">Passeios</Link>
+        <Link href="/">Início</Link>
+        <Link href="/tours">Tours</Link>
         <Link href="/contactos">Contactos</Link>
         <Link href="#">Reserva Já</Link>
       </nav>
