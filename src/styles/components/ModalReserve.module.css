@@ -1,0 +1,226 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1200px;
+  height: 99%;
+  background-color: rgb(255, 255, 255);
+  z-index: 99999;
+  overflow: hidden;
+  padding: 8rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+  display: none;
+}
+
+.modalOpen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4rem;
+  height: 4rem;
+  background-color: #a00f0f;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 1rem 0 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  font-size: 2rem;
+}
+
+.modal .close:hover {
+  background-color: #4b4b4b;
+}
+
+.modal .title {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.modal .title h1 {
+  font-size: 2.7rem;
+  font-weight: 400;
+  color: #000000;
+  text-align: center;
+  font-family: MonumentExtended, sans-serif;
+}
+
+.modal .title p {
+  width: 60%;
+  font-size: 1rem;
+  color: #000000;
+  text-align: center;
+}
+
+.modal .modal form {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal form input {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal form button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #a00f0f;
+  border-radius: 5px;
+  background-color: #a00f0f;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease-in;
+}
+
+.modal form select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.modal form button:hover {
+  border: 1px solid #4b4b4b;
+  background-color: #4b4b4b;
+}
+
+.modal form p {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1rem;
+  color: #000000;
+  font-weight: 600;
+  font-family: MonumentExtended, sans-serif;
+}
+
+.modal form label {
+  width: 100%;
+  margin: 0 auto;
+  padding: 3px;
+  margin: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #000000;
+  font-weight: 600;
+  font-family: MonumentExtended, sans-serif;
+}
+
+/* Breakpoints */
+
+@media screen and (max-width: 700px) {
+  .modal {
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+
+  .modal .title {
+    margin-bottom: 1rem;
+  }
+
+  .modal .title h1 {
+    font-size: 1.2rem;
+  }
+
+  .modal .title p {
+    font-size: 0.7rem;
+    width: 100%;
+  }
+
+  .modal form input {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.7rem;
+  }
+
+  .modal form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+    cursor: pointer;
+    font-size: 0.7rem;
+  }
+
+  .modal form label {
+    width: 100%;
+    margin: 0 auto;
+    padding: 3px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 0.7rem;
+    color: #000000;
+    font-weight: 600;
+    font-family: MonumentExtended, sans-serif;
+  }
+
+  .modal form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #a00f0f;
+    border-radius: 5px;
+    background-color: #a00f0f;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    font-size: 0.7rem;
+    transition: all 0.3s ease-in;
+  }
+
+  .modal form p {
+    font-size: 0.7rem;
+  }
+
+  .modal .close {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+  }
+}

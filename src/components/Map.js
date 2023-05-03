@@ -119,9 +119,9 @@ const Map = (props) => {
           <div className={styles.text}>
             <h2>A Magia Acontece</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              tincidunt, nisl nec ultricies lacinia, nisl nisl aliquet nisl, nec
-              ...
+              Prepare-se para criar memórias incríveis, explorar paisagens
+              deslumbrantes e descobrir a riqueza cultural desta região única. A
+              aventura espera por si!
             </p>
           </div>
           <span>

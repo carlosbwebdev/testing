@@ -6,8 +6,18 @@ const ReserveHome = () => {
     <div className={styles.container}>
       <div className={styles.containerCenter}>
         <h4>Reserve sua viagem</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed</p>
-        <button>Reserve</button>
+        <p>
+          Não perca a oportunidade de viver uma experiência inesquecível nas
+          montanhas de Arcos de Valdevez. Garanta já o seu lugar num dos nossos
+          emocionantes passeios de buggy! Faça a sua reserva connosco!
+        </p>
+        <button
+          onClick={() => {
+            window.location.href = "/passeios";
+          }}
+        >
+          Reserve
+        </button>
       </div>
     </div>
   );

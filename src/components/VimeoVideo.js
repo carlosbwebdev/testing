@@ -20,7 +20,7 @@ const VimeoVideo = ({ videoId }) => {
   return (
     <VisibilitySensor
       partialVisibility={true}
-      minTopValue={100}
+      minTopValue={50}
       onChange={(isVisible) => {
         setInView(isVisible);
       }}

@@ -12,7 +12,15 @@ import HeroParallax from "@/components/HeroParallax";
 import Servicos from "@/components/Servicos";
 import Loader from "@/components/UI/Loader";
 import SliderClientes from "@/components/SliderClientes";
+import ImageSlider from "@/components/ImageSlider";
+import ImagaOne from "../assets/modalmap/modal1.jpg";
+import ImagaTwo from "../assets/modalmap/modal2.jpg";
+import ImagaThree from "../assets/modalmap/modal3.jpg";
+import ImagaFour from "../assets/modalmap/modal4.jpg";
+import ImagaFive from "../assets/modalmap/modal5.jpg";
+import ImagaSix from "../assets/modalmap/modal6.jpg";
 
+const images = [ImagaOne, ImagaTwo, ImagaThree, ImagaFour, ImagaFive, ImagaSix];
 export default function Home() {
   const [animation, setAnimation] = useState(true);
   const [scroll, setScroll] = useState(false);
@@ -32,24 +40,6 @@ export default function Home() {
       document.documentElement.style.setProperty("--vh", `${vh}px`);
     });
   }, []);
-
-  const variants = {
-    offscreen: {
-      opacity: 0,
-      // scale: 0.1,
-    },
-    onscreen: {
-      opacity: 1,
-      // scale: 1,
-
-      transition: {
-        type: "easeIn",
-        stiffness: 100,
-        duration: 1,
-        delay: 0.5,
-      },
-    },
-  };
 
   //loader
   useEffect(() => {
@@ -84,6 +74,7 @@ export default function Home() {
           <HomeGallery />
           <Opiniao />
           <SliderClientes />
+          {/* <ImageSlider images={images} /> */}
           <Map />
           <ReserveHome />
         </motion.div>

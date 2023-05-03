@@ -1,6 +1,6 @@
 .section {
   position: relative;
-  bottom: 12rem;
+  bottom: 13rem;
   overflow: hidden;
   z-index: 2;
   width: 100%;
@@ -28,11 +28,11 @@
   z-index: 1;
 }
 .gallery__header__title h2 {
-  font-size: 3rem;
+  font-size: 2.7rem;
   color: #fff;
   text-align: center;
   font-family: MonumentExtended, sans-serif;
-  padding-bottom: 5rem;
+  padding-bottom: 8rem;
 }
 
 @media screen and (max-width: 700px) {

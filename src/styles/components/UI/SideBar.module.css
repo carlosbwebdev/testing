@@ -1,5 +1,5 @@
 .sideBar {
-  background: white;
+  background-color: rgb(63, 59, 59);
   position: fixed;
   top: 0;
   left: 0;
@@ -37,13 +37,15 @@
   display: block;
   text-align: center;
   text-transform: uppercase;
-  color: rgb(0, 0, 0);
-  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
   font-weight: 600;
+  transition: all 0.2s ease-in-out;
 }
 
 .sideBarAnimation a:hover {
   color: #b11212;
+  transform: scale(1.1);
 }
 
 .sideBarAnimation a:nth-child(1) {
@@ -62,6 +64,41 @@
   animation: slideIn 0.5s ease-in-out 0.5s forwards;
 }
 
+.sidebarSocial {
+  position: relative;
+  top: 15%;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.sidebarSocial a {
+  opacity: 0;
+  display: block;
+}
+
+.sidebarSocial a svg {
+  color: #ffffff;
+  width: 2rem;
+  height: 2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.sidebarSocial a:hover svg {
+  color: #b11212;
+  transform: scale(1.1);
+}
+
+.sidebarSocial a:nth-child(1) {
+  animation: slideUp 0.5s ease-in-out 0.6s forwards;
+}
+
+.sidebarSocial a:nth-child(2) {
+  animation: slideUp 0.5s ease-in-out 0.7s forwards;
+}
+
 @keyframes slideIn {
   0% {
     opacity: 0;
@@ -70,6 +107,17 @@
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

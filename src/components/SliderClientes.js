@@ -23,14 +23,34 @@ const SliderClientes = () => {
   return (
     <div>
       <Swiper
-        slidesPerView={1}
-        spaceBetween={10}
-        // centeredSlides={true}
+        // spaceBetween={30}
+        breakpoints={{
+          320: {
+            width: 320,
+            slidesPerView: 1,
+          },
+          640: {
+            width: 640,
+            slidesPerView: 1,
+          },
+          768: {
+            width: 768,
+            slidesPerView: 2,
+          },
+        }}
+        spaceBetween={20}
+        centeredSlides={true}
         className={styles.mySwiper}
       >
         {images?.map((item) => (
           <SwiperSlide key={item.id} className={styles.slider}>
-            <Image src={item.url} alt={""} />
+            <Image
+              src={item.url}
+              alt={""}
+              // width={640}
+              // height={480}
+              // layout="responsive"
+            />
           </SwiperSlide>
         ))}
       </Swiper>
