@@ -1,9 +1,7 @@
 import Head from "next/head";
-import styles from "@/styles/Home.module.css";
-import React, { useState, useEffect, useRef } from "react";
-import { useScroll, motion, useTransform, useMotionValue } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import HomeGallery from "@/components/HomeGallery";
-import withLoader from "@/components/UI/WithLoader";
 import Map from "@/components/Map";
 import Opiniao from "@/components/Opiniao";
 import ReserveHome from "@/components/ReserveHome";
@@ -12,15 +10,7 @@ import HeroParallax from "@/components/HeroParallax";
 import Servicos from "@/components/Servicos";
 import Loader from "@/components/UI/Loader";
 import SliderClientes from "@/components/SliderClientes";
-import ImageSlider from "@/components/ImageSlider";
-import ImagaOne from "../assets/modalmap/modal1.jpg";
-import ImagaTwo from "../assets/modalmap/modal2.jpg";
-import ImagaThree from "../assets/modalmap/modal3.jpg";
-import ImagaFour from "../assets/modalmap/modal4.jpg";
-import ImagaFive from "../assets/modalmap/modal5.jpg";
-import ImagaSix from "../assets/modalmap/modal6.jpg";
 
-const images = [ImagaOne, ImagaTwo, ImagaThree, ImagaFour, ImagaFive, ImagaSix];
 export default function Home() {
   const [animation, setAnimation] = useState(true);
   const [scroll, setScroll] = useState(false);

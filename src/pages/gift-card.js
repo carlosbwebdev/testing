@@ -80,7 +80,7 @@ export default function GiftCard() {
             value={selectedPasseio}
             onChange={(e) => setSelectedPasseio(e.target.value)}
             className={styles.select}
-            required
+            defaultValue
           >
             <option value="">Selecione um passeio</option>
             <option value="passeio1">Passeio 1</option>

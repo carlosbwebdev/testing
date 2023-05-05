@@ -14,6 +14,7 @@ const Navbar = ({ toggleSidebar, sideBarState }) => {
               window.location.href = "/";
             }}
             loading="eager"
+            priority
           />
         </div>
         <div

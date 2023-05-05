@@ -58,6 +58,7 @@ const Loader = () => {
                 width={50}
                 height={50}
                 loading="eager"
+                priority
               />
             </motion.div>
             {/* <div className={styles.line}></div> */}

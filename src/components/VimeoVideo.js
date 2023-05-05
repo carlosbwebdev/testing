@@ -29,8 +29,9 @@ const VimeoVideo = ({ videoId }) => {
         {inView ? (
           <iframe
             src={`https://player.vimeo.com/video/${videoId}?autoplay=1&loop=0&autopause=0&muted=1&controls=0&repeat=1`}
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture "
+            frameBorder="0"
+            allow="autoplay; picture-in-picture "
+            lowFullScreen
             allowfullscreen
           ></iframe>
         ) : (

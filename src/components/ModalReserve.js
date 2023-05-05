@@ -4,8 +4,8 @@ import { Data } from "../pages/passeios";
 
 const ModalReserve = ({ isOpen, closeModal, passeio }) => {
   const initialFormState = {
-    Horario: "0",
-    Buggies: "0",
+    Horario: "",
+    Buggies: "",
     Passeio: passeio,
   };
 
@@ -35,8 +35,8 @@ const ModalReserve = ({ isOpen, closeModal, passeio }) => {
       setPrice("A combinar");
     }
 
-    setFormValues((prevValues) => ({ ...prevValues, Buggies: "0" }));
-    setFormValues((prevValues) => ({ ...prevValues, Horario: "0" }));
+    setFormValues((prevValues) => ({ ...prevValues, Buggies: "" }));
+    setFormValues((prevValues) => ({ ...prevValues, Horario: "" }));
   }, [formValues.Passeio]);
 
   const handleChange = (e) => {
@@ -78,12 +78,12 @@ const ModalReserve = ({ isOpen, closeModal, passeio }) => {
           <label htmlFor="Passeio">Passeio</label>
           <select
             name="Passeio"
-            value={formValues.Passeio}
+            value={formValues?.Passeio}
             onChange={handleChange}
-            required
+            defaultValue
           >
             {/* Renderiza a opção do passeio passado como prop no final da lista */}
-            <option value="0" selected>
+            <option value="" defaultValue>
               Selecione o Passeio
             </option>
             <option value={passeio}>{passeio}</option>
@@ -102,21 +102,21 @@ const ModalReserve = ({ isOpen, closeModal, passeio }) => {
           </select>
           <select
             name="Horario"
-            value={formValues.Horario}
+            value={formValues?.Horario}
             onChange={handleChange}
-            required
+            defaultValue
           >
-            <option value="0">Hórario</option>
+            <option value="">Hórario</option>
             <option value="Manhã (09h - 12h)">Manhã (09h - 12h)</option>
             <option value="Tarde (14h - 19h)">Tarde (14h - 19h)</option>
           </select>
           <select
             name="Buggies"
-            value={formValues.Buggies}
+            value={formValues?.Buggies}
             onChange={handleChange}
-            required
+            defaultValue
           >
-            <option value="0" selected>
+            <option value="" defaultValue>
               Nº de Buggies
             </option>
             <option value="1">1 (2 - pessoas)</option>
