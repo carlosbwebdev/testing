@@ -113,7 +113,7 @@ const Map = (props) => {
               transition={{ duration: 0.1 }}
               className={styles.defaultImageContainer}
             >
-              <Image src={DefaultImage} alt="" />
+              <Image src={DefaultImage} alt="" loading="eager" />
             </motion.div>
           )}
           <div className={styles.text}>

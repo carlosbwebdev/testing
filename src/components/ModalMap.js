@@ -12,7 +12,7 @@ const ModalMap = ({ image }) => {
       transition={{ duration: 0.5 }}
       className={styles.sectionModal}
     >
-      <Image src={image} alt="foto" />
+      <Image src={image} alt="foto" loading="eager" />
     </motion.div>
   );
 };
