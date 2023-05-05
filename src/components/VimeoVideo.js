@@ -19,7 +19,7 @@ const VimeoVideo = ({ videoId }) => {
             src={`https://player.vimeo.com/video/${videoId}?autoplay=1&loop=0&autopause=0&muted=1&controls=0&repeat=1`}
             frameBorder="0"
             allow="autoplay; picture-in-picture "
-            alowFullScreen
+            allowFullScreen
           ></iframe>
         ) : (
           ""
