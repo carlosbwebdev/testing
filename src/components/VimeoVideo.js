@@ -1,26 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../styles/components/VimeoVideo.module.css";
-import { useInView } from "react-intersection-observer";
+import VisibilitySensor from "react-visibility-sensor";
 
 const VimeoVideo = ({ videoId }) => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.5,
-  });
+  const [inView, setInView] = useState(false);
 
   return (
-    <div ref={ref} className={styles.videoContainer}>
-      {inView ? (
-        <iframe
-          src={`https://player.vimeo.com/video/${videoId}?autoplay=1&loop=0&autopause=0&muted=1&controls=0&repeat=1`}
-          frameBorder="0"
-          allow="autoplay; picture-in-picture "
-          allowFullScreen
-        ></iframe>
-      ) : (
-        ""
-      )}
-    </div>
+    <VisibilitySensor
+      partialVisibility={true}
+      minTopValue={50}
+      onChange={(isVisible) => {
+        setInView(isVisible);
+      }}
+    >
+      <div className={styles.videoContainer}>
+        {inView ? (
+          <iframe
+            src={`https://player.vimeo.com/video/${videoId}?autoplay=1&loop=0&autopause=0&muted=1&controls=0&repeat=1`}
+            frameBorder="0"
+            allow="autoplay; picture-in-picture "
+            alowFullScreen
+          ></iframe>
+        ) : (
+          ""
+        )}
+      </div>
+    </VisibilitySensor>
   );
 };
 
