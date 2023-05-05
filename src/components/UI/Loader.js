@@ -52,7 +52,13 @@ const Loader = () => {
             }}
           >
             <motion.div>
-              <Image src={Logo} alt="Logo" width={50} height={50} />
+              <Image
+                src={Logo}
+                alt="Logo"
+                width={50}
+                height={50}
+                loading="eager"
+              />
             </motion.div>
             {/* <div className={styles.line}></div> */}
             <motion.div className={styles.loaderText}>

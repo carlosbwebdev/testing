@@ -13,6 +13,7 @@ const Navbar = ({ toggleSidebar, sideBarState }) => {
             onClick={() => {
               window.location.href = "/";
             }}
+            loading="eager"
           />
         </div>
         <div

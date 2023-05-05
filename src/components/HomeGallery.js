@@ -81,7 +81,11 @@ const HomeGallery = () => {
                 key={passeio.id}
               >
                 <div className={styles.passeioCardTop}>
-                  <Image src={passeio.image} alt={passeio.title} />
+                  <Image
+                    src={passeio.image}
+                    alt={passeio.title}
+                    loading="eager"
+                  />
                 </div>
                 <div className={styles.passeioCardMiddle}>
                   <div className={styles.passeioCardTitle}>
