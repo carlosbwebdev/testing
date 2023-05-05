@@ -83,9 +83,7 @@ const SliderClientes = () => {
             <Image
               src={item.url}
               alt={""}
-              loading="eager"
-              width={"100%"}
-              height={"100%"}
+              // loading="eager"
             />
           </SwiperSlide>
         ))}
