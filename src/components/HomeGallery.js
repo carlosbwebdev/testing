@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
-import { useScroll, motion, useTransform, useMotionValue } from "framer-motion";
+import { motion } from "framer-motion";
 import styles from "../styles/components/HomeGallery.module.css";
 import Image from "next/image";
 import { Icon } from "@iconify/react";

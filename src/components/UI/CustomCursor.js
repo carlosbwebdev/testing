@@ -32,7 +32,7 @@ const CustomCursor = () => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
 
-      console.log(scrollY, position);
+      // console.log(scrollY, position);
 
       if (scrollY < 100) {
         setCurrentPhrase("Roda a roda!");

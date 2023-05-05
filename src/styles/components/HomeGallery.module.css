@@ -209,7 +209,11 @@
   }
 
   .gallery__header__right__link {
-    gap: 5px;
+    gap: 6px;
+  }
+
+  .gallery__header__right__link p {
+    font-size: 1rem !important;
   }
 
   .gallery .gallery__container {
