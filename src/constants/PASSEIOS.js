@@ -18,7 +18,7 @@ export const Data = [
   {
     title: "Baloiço Do Mezio",
     description:
-      "Passeio com alguma dificuldade. Onde o cliente aprecia a Natureza, animais selvagens e pode ir baloiçar no maior baloiço de Portugal. Passa no alto do Gião, onde se pode obter uma panorâmica de 360º e onde consegue observar o mar em Viana do Castelo, a Serra de Santa Eufémia em Espanha. Pode também observar algumas gravuras rupestres.",
+      "Passeio com alguma dificuldade. Onde o cliente aprecia a Natureza, animais selvagens e pode ir baloiçar no maior baloiço de Portugal. Passa no alto do Gião, onde se pode obter uma panorâmica de 360º e onde consegue observar o mar em Viana do Castelo, a Serra de Santa Eufémia em Espanha.",
     image: passeioImg4,
     video: "https://www.youtube.com/embed/1Q8fG0TtVAY",
     price: "80€",
