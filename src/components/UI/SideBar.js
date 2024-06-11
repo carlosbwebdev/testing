@@ -1,18 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "../../styles/components/UI/SideBar.module.css";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
+import { LanguageContext } from "../../context/LanguageContext";
+import translations from "../../utils/translations";
 
 const SideBar = ({ isOpen }) => {
+  const { language } = useContext(LanguageContext);
+  const { home, tours, contacts, reserve } = translations[language];
+
   return (
     <aside
       className={` ${styles.sideBar} ${isOpen ? styles.showSidebar : ""} `}
     >
       <nav className={` ${isOpen ? styles.sideBarAnimation : ""}`}>
-        <Link href="/">Início</Link>
-        <Link href="/passeios">Passeios</Link>
-        <Link href="/contactos">Contactos</Link>
-        <Link href="/passeios">Reserva Já</Link>
+        <Link href="/">{home}</Link>
+        <Link href="/passeios">{tours}</Link>
+        <Link href="/contactos">{contacts}</Link>
+        <Link href="/passeios">{reserve}</Link>
       </nav>
       <div className={`${isOpen ? styles.sidebarSocial : ""}`}>
         <Link href="https://www.facebook.com/">

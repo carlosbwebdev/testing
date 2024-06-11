@@ -1,22 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "../styles/components/ReserveHome.module.css";
+import { LanguageContext } from "../context/LanguageContext"; // Importar o contexto do idioma
+import translations from "../utils/translations"; // Importar as traduções
 
 const ReserveHome = () => {
+  const { language } = useContext(LanguageContext); // Consumir o contexto do idioma
+  const { reserveHomeTitle, reserveHomeDescription } = translations[language]; // Obter as traduções com base no idioma
+
   return (
     <div className={styles.container}>
       <div className={styles.containerCenter}>
-        <h4>Reserve sua viagem</h4>
-        <p>
-          Não perca a oportunidade de viver uma experiência inesquecível nas
-          montanhas de Arcos de Valdevez. Garanta já o seu lugar num dos nossos
-          emocionantes passeios de buggy! Faça a sua reserva connosco!
-        </p>
+        <h4>{reserveHomeTitle}</h4>
+        <p>{reserveHomeDescription}</p>
         <button
           onClick={() => {
             window.location.href = "/passeios";
           }}
         >
-          Reserve
+          {translations[language].reserveNow}
         </button>
       </div>
     </div>

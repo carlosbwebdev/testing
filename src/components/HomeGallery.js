@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import styles from "../styles/components/HomeGallery.module.css";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 import { Data } from "../constants/PASSEIOS";
+import { DataEN } from "../constants/PASSEIOS_ENG";
 import ModalReserve from "./ModalReserve";
+import { LanguageContext } from "../context/LanguageContext";
+import translations from "../utils/translations";
 
 const HomeGallery = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,6 +21,7 @@ const HomeGallery = () => {
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
+
   const constants = {
     hidden: {
       opacity: 0,
@@ -33,12 +37,19 @@ const HomeGallery = () => {
       },
     },
   };
+
   const limitString = (string, limit) => {
     if (string.length > limit) {
       return string.substring(0, limit) + "...";
     }
     return string;
   };
+
+  const { language } = useContext(LanguageContext);
+  const { galleryHeader, galleryDescription, viewAllTours, schedule } =
+    translations[language];
+
+  const data = language === "pt" ? Data : DataEN;
 
   return (
     <div>
@@ -50,29 +61,26 @@ const HomeGallery = () => {
       <section className={styles.gallery}>
         <motion.div className={styles.gallery__header}>
           <motion.div className={styles.gallery__header__title}>
-            <h2>Divertimento</h2>
-            <p>
-              Os nossos passeios turisticos são uma forma divertida de conhecer
-              a natureza.
-            </p>
+            <h2>{galleryHeader}</h2>
+            <p>{galleryDescription}</p>
           </motion.div>
 
           <motion.div className={styles.gallery__header__right}>
             <div className={styles.gallery__header__right__link}>
               <div className={styles.gallery__header__right__link}>
                 <Icon icon="mdi:map-search-outline" width="24" />
-                <Link href="/passeios">Ver todos os passeios</Link>
+                <Link href="/passeios">{viewAllTours}</Link>
               </div>
             </div>
             <div className={styles.gallery__header__right__link}>
               <Icon icon="material-symbols:calendar-month-outline" width="24" />
-              <p onClick={handleOpenModal}>Agendar</p>
+              <p onClick={handleOpenModal}>{schedule}</p>
             </div>
           </motion.div>
         </motion.div>
         <div className={styles.gallery__container}>
           <div className={styles.passeio}>
-            {Data?.slice(0, 3).map((passeio) => (
+            {data?.slice(0, 3).map((passeio) => (
               <motion.div
                 variants={constants}
                 initial="hidden"
@@ -106,7 +114,7 @@ const HomeGallery = () => {
                         setSelectedPasseio(passeio.title);
                       }}
                     >
-                      Reservar
+                      {schedule}
                     </button>
                   </div>
                 </div>

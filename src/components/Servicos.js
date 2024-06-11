@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import VimeoVideo from "@/components/VimeoVideo";
+import { LanguageContext } from "@/context/LanguageContext";
 
 import styles from "../styles/components/Servicos.module.css";
 const Servicos = () => {
@@ -22,6 +23,8 @@ const Servicos = () => {
     },
   };
 
+  const { language } = useContext(LanguageContext);
+
   return (
     <section className={styles.section}>
       <motion.div className={styles.gallery__header}>
@@ -32,7 +35,9 @@ const Servicos = () => {
           variants={variants}
           className={styles.gallery__header__title}
         >
-          <h2>Experiência Única</h2>
+          <h2>
+            {language === "pt" ? "Experiência Única" : "Unique Experience"}
+          </h2>
         </motion.div>
       </motion.div>
       <VimeoVideo videoId={823393167} />

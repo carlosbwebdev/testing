@@ -6,11 +6,17 @@ import Logo from "../../assets/logofinal.svg";
 
 const phrases = [
   "Aventura",
+  "Fun",
+  "Nature",
   "Natureza",
+  "Speed",
   "Diversão",
+  "Sunset",
   "Velocidade",
+  "Landscapes",
   "Ação",
   "Paisagens",
+  "Adventure",
   "Pôr Do Sol",
 ];
 
@@ -21,7 +27,7 @@ const Loader = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % phrases.length);
-    }, 180);
+    }, 120);
 
     return () => clearInterval(interval);
   }, []);

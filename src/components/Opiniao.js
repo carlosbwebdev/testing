@@ -1,19 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "../styles/components/Opiniao.module.css";
+import { LanguageContext } from "../context/LanguageContext"; // Importar o contexto do idioma
+import translations from "../utils/translations"; // Importar as traduções
 import Carousel from "../components/Carousel";
 
 const Opiniao = () => {
+  const { language } = useContext(LanguageContext); // Consumir o contexto do idioma
+  const { opiniaoTitle, opiniaoDescription } = translations[language]; // Obter as traduções com base no idioma
+
   return (
     <div className={styles.container}>
       <div className={styles.text}>
-        <h2>Experiências Fantásticas </h2>
-        <p>
-          Explore as aventuras vividas pelos nossos clientes através do nosso
-          slider de fotos! Esta galeria apresenta momentos incríveis capturados
-          pelos entusiastas dos nossos passeios de buggy em Arcos de Valdevez.
-          Deixe-se inspirar pelas suas histórias e embarque na sua própria
-          aventura connosco!
-        </p>
+        <h2>{opiniaoTitle}</h2>
+        <p>{opiniaoDescription}</p>
       </div>
       {/* <Carousel /> */}
     </div>

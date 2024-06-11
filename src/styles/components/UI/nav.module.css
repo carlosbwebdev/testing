@@ -144,6 +144,24 @@
 .burgerMenuClose:hover .lineBottom {
   background-color: #b11212;
 }
+.language {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.7rem;
+  transition: all 0.3s ease-in;
+}
+
+.language:hover {
+  background-color: #b11212;
+  color: #ffffff;
+  transform: scale(1.1);
+}
 
 @media screen and (max-width: 700px) {
   .nav {

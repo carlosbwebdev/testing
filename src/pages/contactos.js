@@ -1,17 +1,41 @@
 import Layout from "@/components/UI/Layout";
-import React from "react";
+import React, { useContext } from "react";
 import styles from "../styles/pages/contactos.module.css";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+import { LanguageContext } from "@/context/LanguageContext";
+import translations from "@/utils/translations";
 
 const Contactos = () => {
+  const { language } = useContext(LanguageContext);
+  console.log(language);
+
+  const {
+    contactsTitle,
+    contactsDescription,
+    contactFormName,
+    contactFormEmail,
+    contactFormPhone,
+    contactFormMessage,
+    contactFormSend,
+    contactInfoTitle,
+    contactInfoAddress,
+    contactInfoPhone,
+    contactInfoEmail,
+    contactInfoSocial,
+  } = translations[language];
+
   return (
     <div>
       <Layout>
         <Head>
-          <title>Contactos | GoBuggy Arcos </title>
+          <title>
+            {language === "pt"
+              ? "Contactos | GoBuggy Arcos"
+              : "Contacts | GoBuggy Arcos"}
+          </title>
           <meta
             name="description"
             content="Contactos | GoBuggy Arcos website"
@@ -27,43 +51,38 @@ const Contactos = () => {
           className={styles.contactosPage}
         >
           <div className={styles.title}>
-            <h1>Contactos</h1>
-            <p>
-              Entre em contacto connosco para esclarecer dúvidas, obter
-              informações adicionais ou agendar o seu passeio de buggy em Arcos
-              de Valdevez. Estamos à disposição para ajudá-lo a planear a sua
-              aventura e garantir que tenha uma experiência memorável.
-            </p>
+            <h1>{contactsTitle}</h1>
+            <p>{contactsDescription}</p>
           </div>
 
           <form>
             <div className={styles.formGroup}>
-              <label htmlFor="name">Nome</label>
+              <label htmlFor="name">{contactFormName}</label>
               <input type="text" name="name" id="name" />
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">{contactFormEmail}</label>
               <input type="email" name="email" id="email" />
-              <label htmlFor="Telefone">Telefone</label>
+              <label htmlFor="Telefone">{contactFormPhone}</label>
               <input type="text" name="Telefone" id="Telefone" />
-              <label htmlFor="message">Mensagem</label>
+              <label htmlFor="message">{contactFormMessage}</label>
               <textarea
                 name="message"
                 id="message"
                 cols="30"
                 rows="10"
               ></textarea>
-              <button type="submit">Enviar</button>
+              <button type="submit">{contactFormSend}</button>
             </div>
             <div className={styles.info}>
-              <h2>Informações de contacto</h2>
+              <h2>{contactInfoTitle}</h2>
               <p>
-                <strong>Endereço: </strong>
+                <strong>{contactInfoAddress}: </strong>
                 <a href="https://www.google.com/maps?q=41.86496387475182, -8.385042275378403">
                   Caminho de Nunide Nº86 4970-071 Arcos de Valdevez
                 </a>
                 <br />
-                <strong>Telefone:</strong>{" "}
+                <strong>{contactInfoPhone}:</strong>{" "}
                 <a href="tel:+351 934 142 058">+351 934 142 058</a> <br />
-                <strong>Email: </strong>
+                <strong>{contactFormEmail}: </strong>
                 <a
                   href="mailto:gobuggyarcos@gmail.com"
                   className={styles.email}
@@ -73,8 +92,7 @@ const Contactos = () => {
               </p>
               <div className={styles.infoSocial}>
                 <p>
-                  Siga-nos também nas redes sociais para se manter atualizado
-                  sobre as nossas últimas notícias, ofertas especiais e eventos:
+                  <strong>{contactInfoSocial}</strong>
                 </p>
 
                 <ul>

@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { motion } from "framer-motion";
 import styles from "../styles/components/Map.module.css";
 import VisibilitySensor from "react-visibility-sensor";
 import ModalMap from "./ModalMap";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
+import { LanguageContext } from "../context/LanguageContext";
+import translations from "@/utils/translations";
 
 // ========================
 
@@ -90,6 +92,10 @@ const Map = (props) => {
     // Adiciona uma classe com o nome da imagem de fundo
     mapContainer.classList.add(styles[`bg-click${event.target.id}`]);
   };
+
+  const { language } = useContext(LanguageContext); // Consumir o contexto do idioma
+
+  const { mapTitle, mapDescription } = translations[language]; // Obter as traduções com base no idioma
   return (
     <VisibilitySensor
       partialVisibility
@@ -117,12 +123,8 @@ const Map = (props) => {
             </motion.div>
           )}
           <div className={styles.text}>
-            <h2>A Magia Acontece</h2>
-            <p>
-              Prepare-se para criar memórias incríveis, explorar paisagens
-              deslumbrantes e descobrir a riqueza cultural desta região única. A
-              aventura espera por si!
-            </p>
+            <h2>{mapTitle}</h2>
+            <p>{mapDescription}</p>
           </div>
           <span>
             <Icon icon="lucide:mouse-pointer" width={30} />

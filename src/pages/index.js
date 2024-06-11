@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { motion } from "framer-motion";
 import HomeGallery from "@/components/HomeGallery";
 import Map from "@/components/Map";
@@ -10,10 +10,13 @@ import HeroParallax from "@/components/HeroParallax";
 import Servicos from "@/components/Servicos";
 import Loader from "@/components/UI/Loader";
 import SliderClientes from "@/components/SliderClientes";
+import { LanguageContext } from "@/context/LanguageContext";
 
 export default function Home() {
   const [animation, setAnimation] = useState(true);
   const [scroll, setScroll] = useState(false);
+
+  const { language } = useContext(LanguageContext);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -48,7 +51,11 @@ export default function Home() {
       <Layout>
         <motion.div>
           <Head>
-            <title>Página Inicial | GoBuggy Arcos </title>
+            <title>
+              {language === "pt"
+                ? "Página Inicial | GoBuggy Arcos"
+                : "Home | GoBuggy Arcos"}{" "}
+            </title>
             <meta
               name="description"
               content="Pagina inicial GoBuggy Arcos website"

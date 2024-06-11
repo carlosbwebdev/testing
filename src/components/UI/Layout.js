@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import SideBar from "./SideBar";
-
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 
@@ -10,9 +9,9 @@ const Layout = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleSidebarState = () => {
-    console.log("clicked");
     setIsOpen(!isOpen);
   };
+
   return (
     <>
       <Navbar toggleSidebar={handleSidebarState} sideBarState={isOpen} />
